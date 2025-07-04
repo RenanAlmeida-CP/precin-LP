@@ -52,14 +52,10 @@ Header / Navigation
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--text-primary);
-    text-decoration: none;
-}
-.logo span {
-    color: var(--brand-green);
+/* === NEW STYLE FOR THE LOGO IMAGE === */
+.logo img {
+    height: 32px; /* Controls the height of your logo. Adjust if needed. */
+    display: block; /* Helps prevent extra space below the image */
 }
 
 .nav-links a {
@@ -143,15 +139,9 @@ Features Grid (The Cards)
     flex-direction: column;
     justify-content: space-between;
     min-height: 220px;
-    /* This transition is key for the "pop" effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 
-========================================
-The "Pop Up" Hover Effect
-========================================
-*/
 .feature-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
