@@ -1,0 +1,193 @@
+/* 
+========================================
+CSS Variables & Global Styles
+========================================
+*/
+:root {
+    --bg-body: #f7f7f7; /* Very light grey background */
+    --bg-card: #ffffff; /* White for cards */
+    --text-primary: #1c1c1c; /* Dark text for readability */
+    --text-secondary: #555555; /* Lighter text for subtitles */
+    --brand-green: #22c55e; /* Vibrant green for accents */
+    --brand-green-dark: #16a34a; /* Darker green for hover states */
+    --border-color: #e5e7eb; /* Subtle border color */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 
+========================================
+Header / Navigation
+========================================
+*/
+.main-header {
+    background-color: var(--bg-body);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+.logo span {
+    color: var(--brand-green);
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+.btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--brand-green);
+    color: white;
+}
+.btn-primary:hover {
+    background-color: var(--brand-green-dark);
+}
+
+/* 
+========================================
+Hero Section (Main Title)
+========================================
+*/
+.hero {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 
+========================================
+Features Grid (The Cards)
+========================================
+*/
+.features-section {
+    padding-bottom: 80px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.feature-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 32px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    /* This transition is key for the "pop" effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 
+========================================
+The "Pop Up" Hover Effect
+========================================
+*/
+.feature-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    margin-bottom: 20px;
+}
+
+.card-icon svg {
+    width: 40px;
+    height: 40px;
+    color: var(--brand-green);
+}
+
+.card-text h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.card-text p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.1rem;
+    }
+    .nav-links {
+        display: none; /* Hide nav links on mobile for simplicity */
+    }
+}
