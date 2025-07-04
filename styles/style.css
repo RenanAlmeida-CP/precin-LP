@@ -54,7 +54,7 @@ Header / Navigation
 
 /* === NEW STYLE FOR THE LOGO IMAGE === */
 .logo img {
-    height: 35px; /* Controls the height of your logo. Adjust if needed. */
+    height: 32px; /* Controls the height of your logo. Adjust if needed. */
     display: block; /* Helps prevent extra space below the image */
 }
 
